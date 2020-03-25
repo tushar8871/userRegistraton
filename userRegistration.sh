@@ -4,6 +4,7 @@
 NAMEPATTERN="^[A-Z][a-z]{3,}$"
 EMAILPATTERN="^[a-zA-Z0-9._a-zA-Z0-9]+@[a-zA-Z0-9.a-zA-Z0-9]+\.[A-Za-z]{2,4}$"
 MOBILEPATTERN="^[0-9]{2} [7-9]{1}[0-9]{9}$"
+PASSWORDPATTERN="^[A-Za-z0-9]{8,}$"
 
 #variables
 firstName=""
@@ -48,4 +49,14 @@ then
 	echo "Valid mobile format"
 else
 	echo "Not valid mobile format"
+fi
+
+
+#read password from user and it must contain 8 character
+read -p "Enter password : " password
+if [[ $password =~ $PASSWORDPATTERN ]]
+then
+	echo "Valid password"
+else
+	echo "Invalid password"
 fi
