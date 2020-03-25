@@ -3,6 +3,7 @@
 #constants
 NAMEPATTERN="^[A-Z][a-z]{3,}$"
 EMAILPATTERN="^[a-zA-Z0-9._a-zA-Z0-9]+@[a-zA-Z0-9.a-zA-Z0-9]+\.[A-Za-z]{2,4}$"
+MOBILEPATTERN="^[0-9]{2} [7-9]{1}[0-9]{9}$"
 
 #variables
 firstName=""
@@ -37,4 +38,14 @@ then
 	echo "Valid email"
 else
 	echo "Not valid email"
+fi
+
+
+#read mobile number
+read -p "Enter mobile number : " mobileNumber
+if [[ $mobileNumber =~ $MOBILEPATTERN ]]
+then
+	echo "Valid mobile format"
+else
+	echo "Not valid mobile format"
 fi
