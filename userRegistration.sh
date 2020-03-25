@@ -4,12 +4,13 @@
 NAMEPATTERN="^[A-Z][a-z]{3,}$"
 EMAILPATTERN="^[a-zA-Z0-9._a-zA-Z0-9]+@[a-zA-Z0-9.a-zA-Z0-9]+\.[A-Za-z]{2,4}$"
 MOBILEPATTERN="^[0-9]{2} [7-9]{1}[0-9]{9}$"
-PASSWORDPATTERN="^[A-Za-z0-9]{8,}$"
+PASSWORDPATTERN="^[a-zA-Z0-9]*(.*[A-Z].*{1}+)*[a-zA-Z0-9]{7,}$"
 
 #variables
 firstName=""
 lastName=""
 email=""
+password=""
 
 #welcome message
 echo "Welcome to user registration validation ! "
