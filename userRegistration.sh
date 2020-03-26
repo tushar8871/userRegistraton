@@ -1,8 +1,13 @@
-
 #!/bin/bash -x
 
 #constants
 NAMEPATTERN="^[A-Z][a-z]{3,}$"
+
+EPATTERN1="^[a-zA-Z0-9]{1,}+@{1}$"
+EPATTERN2="^[a-zA-Z0-9]{1,}+@{1}[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$"
+EPATTERN3="^[a-zA-Z0-9._a-zA-Z0-9]+@{1}[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$"
+EPATTERN4="^[a-zA-Z0-9._a-zA-Z0-9]+@{1}[a-zA-Z0-9.a-zA-Z0-9]+\.[A-Za-z]{2,4}$"
+
 EMAILPATTERN="^[a-zA-Z0-9._a-zA-Z0-9]+@[a-zA-Z0-9.a-zA-Z0-9]+\.[A-Za-z]{2,4}$"
 MOBILEPATTERN="^[0-9]{2} [7-9]{1}[0-9]{9}$"
 PASSWORDPATTERN="^[a-zA-Z0-9]*(.*[A-Z].*{1}+)*(.*[0-9].*{1}+)*(.*[!@#$%^&*=+].*{1}+)*[a-zA-Z0-9]{5,}$"
